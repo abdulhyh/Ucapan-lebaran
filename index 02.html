@@ -64,5 +64,57 @@
             height: 100%;
             top: 0;
             left: 0;
-            z-
-  
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars" id="starField"></div>
+
+    <div class="container">
+        <h1>Selamat Idul Fitri</h1>
+        <span class="arabic">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ</span>
+        
+        <div class="pesan" id="typingText"></div>
+
+        <div class="signature">
+            — Dari Sahabatmu —
+        </div>
+    </div>
+
+    <script>
+        // Masukkan kata-katamu di sini
+        const teks = "Mungkin jemari tak sempat menjabat, namun hati selalu terpaut. Di hari yang fitri ini, mohon maafkan segala salah yang sengaja maupun tak sengaja. Minal 'Aidin wal-Faizin, mohon maaf lahir dan batin ya!,jika ada kesalahan tolong di maafkan jika tidak ada juga harus dimaafkan intinya mohon maaf lahir dan batin🙏🏻";
+        
+        let i = 0;
+        const speed = 50; // Kecepatan mengetik (ms)
+
+        function typeWriter() {
+            if (i < teks.length) {
+                document.getElementById("typingText").innerHTML += teks.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // Jalankan animasi setelah halaman dimuat
+        window.onload = typeWriter;
+
+        // Tambahkan efek bintang acak
+        const starField = document.getElementById('starField');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.style.position = 'absolute';
+            star.style.width = '2px';
+            star.style.height = '2px';
+            star.style.backgroundColor = '#fff';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.opacity = Math.random();
+            starField.appendChild(star);
+        }
+    </script>
+</body>
+    </html>
+    
