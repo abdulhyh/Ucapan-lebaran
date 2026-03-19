@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Idul Fitri</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e524d, #0a2e2a);
+            color: #f1c40f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid #f1c40f;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 80%;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .arabic {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            display: block;
+            color: #f1c40f;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Selamat Idul Fitri</h1>
+        <p>Taqabbalallahu minna wa minkum</p>
+        <span class="arabic">من العايدين والفايزين</span>
+        <p>Minal 'Aidin wal-Faizin<br>Mohon Maaf Lahir dan Batin</p>
+        <hr style="border: 0.5px solid #f1c40f; margin: 20px 0;">
+        <p style="font-size: 0.9rem; font-style: italic;">Semoga keberkahan selalu menyertai kita semua.</p>
+    </div>
+
+</body>
+</html>
